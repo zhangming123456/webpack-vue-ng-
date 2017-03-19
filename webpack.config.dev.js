@@ -45,7 +45,7 @@ module.exports = {
         publicPath: publicPath,
         chunkFilename: "chunks/[name].chunk.[chunkhash].js"
     },
-    //模块配置
+    //加载器模块配置
     module: require('./webpack.config.module'),
     //插件配置
     plugins: plugins,
