@@ -12,10 +12,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "angular": "^1.6.3",
-    "angular-resource": "^1.6.3",
-    "angular-ui-bootstrap": "^2.5.0",
-    "angular-ui-router": "^0.4.2"
+    "vue": "^2.2.4",
+    "vue-resource": "^1.2.1",
+    "vue-router": "^2.3.0"
   },
   "devDependencies": {
     "autoprefixer": "^6.7.7",
