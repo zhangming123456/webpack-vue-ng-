@@ -5,16 +5,17 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --config webpack.config.dev.js --progress --color ",
-    "dev": "webpack-dev-server --config webpack.config.dev.js --progress --color --inline --hot --port 3000 --open"
+    "build": "set NODE_ENV=build && webpack --config webpack.config.dev.js --progress --color ",
+    "dev": "set NODE_ENV=dev && webpack-dev-server --config webpack.config.dev.js --progress --color --inline --hot --port 3000 --open"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "vue": "^2.2.4",
-    "vue-resource": "^1.2.1",
-    "vue-router": "^2.3.0"
+    "angular": "^1.6.3",
+    "angular-resource": "^1.6.3",
+    "angular-ui-bootstrap": "^2.5.0",
+    "angular-ui-router": "^0.4.2"
   },
   "devDependencies": {
     "autoprefixer": "^6.7.7",

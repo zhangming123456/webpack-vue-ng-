@@ -1,10 +1,11 @@
 var path = require('path');
 var webpack = require('webpack');
 var autoprefixer = require('autoprefixer'),//添加私有前缀
-    __DEV__ = process.env.NODE_ENV === 'dev', //发布环境
+    __DEV__ = false, //发布环境
     publicPath = '', //资源引用统一前缀
     devtool = '', //source-map模式
     plugins = require('./webpack.config.plugins');
+process.env.NODE_ENV && (__DEV__ = (process.env.NODE_ENV.trim() === "dev"));
 if (!__DEV__) {
     //js压缩
     plugins = plugins.concat([
@@ -35,8 +36,8 @@ module.exports = {
     //入口文件配置
     entry: {
         app: path.join(__dirname, '/src/app/app.js'),
-        vendors: ['vue', 'vue-router', 'vue-resource'],
-        // vendors: ['angular', 'angular-route', 'angular-resource']//angular静态资源名
+        vendors: ['vue', 'vue-router', 'vue-resource'],//Vue静态资源名
+        //vendors: ['angular', 'angular-ui-router', 'angular-resource','angular-ui-bootstrap']//angular静态资源名
     },
     //文件导出的配置
     output: {
